@@ -1,4 +1,5 @@
 # Django settings for tango_with_django_project project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -107,10 +108,17 @@ ROOT_URLCONF = 'tango_with_django_project.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+#TEMPLATE_PATH = 'c:/Users/szymon.rogalski/workspace/django/code/tango/tango_with_django_project/templates/'
+
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    TEMPLATE_PATH,
 )
 
 INSTALLED_APPS = (
