@@ -8,6 +8,12 @@ ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
+
+STATIC_PATH = os.path.join(BASE_DIR,'static')
+
 MANAGERS = ADMINS
 
 DATABASES = {
@@ -73,6 +79,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    STATIC_PATH,
 )
 
 # List of finder classes that know how to find static files in
@@ -107,12 +114,6 @@ ROOT_URLCONF = 'tango_with_django_project.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-#TEMPLATE_PATH = 'c:/Users/szymon.rogalski/workspace/django/code/tango/tango_with_django_project/templates/'
-
-TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
